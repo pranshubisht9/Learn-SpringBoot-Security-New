@@ -1,0 +1,41 @@
+Client ---------- [filter][filter][filter]   ----------  Server[dispatcher servlet -> helper controller -> @Service -> @Repository] ---- db
+
+
+
+             
+#Servelet filters: 
+-- A Servlet filter is a component in Java Servlet technology that intercepts incoming requests and outgoing responses to perform some pre-processing or post-processing tasks. It provides a way to modify or enhance the request/response handling process before the request reaches the servlet or after the servlet generates the response.
+
+--Spring security framework is based on these servelet filters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
