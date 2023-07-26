@@ -1,0 +1,41 @@
+Encoding, hashing, encryption, and decryption are all cryptographic techniques used to secure sensitive data, especially passwords. Each serves a different purpose and provides different levels of security.
+
+Encoding:
+Encoding is a process of converting data from one format to another. It is a one-way process and is not meant for security purposes but rather for data representation. Common encoding methods include Base64 encoding, which converts binary data into a human-readable format using a set of 64 printable characters.
+Example of Base64 Encoding:
+Original Text: "Hello, World!"
+Base64 Encoded: "SGVsbG8sIFdvcmxkIQ=="
+
+It's important to note that encoding is not suitable for securing passwords or sensitive information, as the encoded data can be easily decoded.
+
+Hashing:
+Hashing is a one-way mathematical function that takes an input (or "message") and converts it into a fixed-size string of characters, typically a hexadecimal value. A good hashing algorithm ensures that it is computationally infeasible to reverse the process and obtain the original input from the hash. Hashing is commonly used to store password hashes securely.
+When a user creates or updates their password, the system hashes it and stores the hash in the database. When the user tries to log in, the system hashes the entered password again and compares it with the stored hash.
+
+Example of Hashing (using SHA-256 algorithm):
+Original Password: "MySecretPassword"
+Hashed Value: "43f5dfc901fcf173f8fb4f0e3ad17e563d5372c00bf6086c8a775b43d41429ca"
+
+Since hashing is a one-way process, the same input will always produce the same hash, allowing for password verification without storing the actual password.
+
+Encryption:
+Encryption is a reversible process that uses an encryption algorithm and a secret key to convert plaintext (original data) into ciphertext (encrypted data). The ciphertext can be decrypted back to the original plaintext using the same encryption key. Encryption is commonly used to protect data during transmission or storage, ensuring that only authorized parties can access the original data.
+Example of Encryption (using AES encryption algorithm):
+Original Text: "Sensitive information"
+Encryption Key: (a secret key)
+Encrypted Text: "U2FsdGVkX1/8LFdRk5F7JJfZbe8r3ekHDDPTd2gL+zU="
+
+Decryption:
+Decryption is the process of converting encrypted data (ciphertext) back into its original plaintext form using the appropriate decryption algorithm and the secret key used for encryption.
+Example of Decryption (using AES decryption algorithm):
+Encrypted Text: "U2FsdGVkX1/8LFdRk5F7JJfZbe8r3ekHDDPTd2gL+zU="
+Decryption Key: (the same secret key used for encryption)
+Decrypted Text: "Sensitive information"
+
+Unlike hashing, encryption is a two-way process and is used when the original data needs to be retrieved securely.
+
+In summary, hashing is suitable for storing passwords securely, while encryption is used for secure data transmission or storage. Encoding is used for data representation and not for security purposes.
+
+
+
+
